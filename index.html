@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate blood! Donate life!</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1><img src="/img/logo.png" alt="Doe"></h1>
+        <h2>Your donation matters</h2>
+        <p>Up to 3 lives with 1 donation</p>
+        <p>More than 38,000 donations are needed every day</p>
+        <p>Only 1.9% of the Brazilian population donates bloo</p>
+        <button>I want to help</button>
+    </header>
+
+    <section class="form hide">
+        <h2>Enter the donor list</h2>
+        <form action="/" method="POST" class="hide">
+            <input type="text" name="name" class="ipt" placeholder="Full name" >
+            <input type="email" name="email" class="ipt" placeholder="Email">
+            <input type="text" name="blood" class="ipt" placeholder="Blood type">
+            <button>I want to help</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Latest <span>donors</span></h2>
+
+        <section class="donors">
+
+            <!-- Lendo itens do banco de dados atraves de nunjucks -->
+            {% for donor in donors %}
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {%endfor%}
+
+        </section>
+    </main>
+
+    <footer>
+        <p>With <span>❤️</span> UFRN</p>
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

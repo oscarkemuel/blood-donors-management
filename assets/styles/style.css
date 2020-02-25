@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+span{
+    color: #F32F48;
+}
+
+*{  
+    color: #24282E;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #FDF8FD;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+    height: 100vh;
+}
+
+h1 img{
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+/* Alinhamentos gerais */
+header, main, section, .form{
+    text-align: center;
+    margin: 0 auto 70px;
+    width: 90%;
+    max-width: 500px;
+}
+
+header button{
+    background-color: #F32F48;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: #FDF8FD;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header p{
+    font-size: 14px;
+}
+
+.form{
+    /* Gerando duas colunas e alinhando itens */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 45px;
+
+    background-color: #F32F48;
+    border-radius: 5px;
+    width: 500px;
+    padding: 15px 50px;
+
+    /* Efeito de trancicao */
+    transition: all 400ms;
+}
+
+.ipt{
+    border: solid #ffffff88 1px;
+    margin-bottom: 4px;
+    background-color: #F32F48;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    
+}
+
+/* Mudando a cor do placeholder */
+form input::placeholder{
+    color: #ffffffaa;
+}
+
+section.form button{
+    border: 0;
+    background-color: #ffffff;
+    width: 191px;
+    height: 38px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+section.form h2{
+    text-align: right;
+    color: #FDF8FD;
+}
+
+/* Criando 4 colunas para os donors */
+.donors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood{
+    color: #F32F48;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Criando um novo elemento de gota */
+.blood::before{
+    content: "";
+    background-color: #F32F4811;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+}
+
+.donor p{
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+footer{
+    margin-top: auto;
+    text-align: center;
+}
+
+
+/* Manipulando transição com JS */
+.hide{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
